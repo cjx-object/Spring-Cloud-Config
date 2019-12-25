@@ -1,0 +1,25 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+       pool:
+          max-active: 10
+          max-idle: 5
+
+
+---
+spring:
+  profiles: pvd
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+       pool:
+          max-active: 100
+          max-idle: 20
